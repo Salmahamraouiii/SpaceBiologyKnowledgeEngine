@@ -1,0 +1,229 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BioSearch - Biology Experiment Database</title>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <h1>Biology Experiment Research Portal</h1>
+      <p>NASA’s biology research at your fingertips</p>
+    
+    <section class="search-container">
+      <div class="search-box">
+        <div class="search-input">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" placeholder="Search for experiments, organisms, researchers...">
+        </div>
+        <button class="search-btn"><i class="fas fa-rocket"></i> Search</button>
+      </div>
+      
+      <div class="advanced-options">
+        <div class="filter-toggle" id="filterToggle">
+          <i class="fas fa-sliders-h"></i>
+          <span>Advanced Filters</span>
+          <div class="filter-count">3</div>
+        </div>
+        
+        <div class="search-options">
+          <button class="option-btn"><i class="fas fa-history"></i> Recent</button>
+          <button class="option-btn"><i class="fas fa-star"></i> Saved</button>
+        </div>
+      </div>
+      
+      <div class="filter-panel" id="filterPanel">
+        <div class="filter-group">
+          <h3><i class="fas fa-flask"></i> Experiment Type</h3>
+          <div class="filter-options">
+            <div class="filter-option">
+              <input type="checkbox" id="type1" checked>
+              <label for="type1">Microbiology</label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="type2" checked>
+              <label for="type2">Plant Biology</label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="type3">
+              <label for="type3">Human Physiology</label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="type4">
+              <label for="type4">Genetics</label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="filter-group">
+          <h3><i class="fas fa-globe-americas"></i> Environment</h3>
+          <div class="filter-options">
+            <div class="filter-option">
+              <input type="checkbox" id="env1" checked>
+              <label for="env1">International Space Station</label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="env2">
+              <label for="env2">Earth-based Lab</label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="env3">
+              <label for="env3">Mars Analog</label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="filter-group">
+          <h3><i class="fas fa-calendar-alt"></i> Date Range</h3>
+          <div class="date-range">
+            <div class="date-inputs">
+              <input type="date" placeholder="Start date">
+              <input type="date" placeholder="End date">
+            </div>
+          </div>
+        </div>
+        
+        <div class="filter-group">
+          <h3><i class="fas fa-tags"></i> Keywords</h3>
+          <div class="filter-options">
+            <div class="filter-option">
+              <input type="checkbox" id="keyword1">
+              <label for="keyword1">Radiation</label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="keyword2" checked>
+              <label for="keyword2">Microgravity</label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="keyword3">
+              <label for="keyword3">Growth Patterns</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="results-container">
+      <div class="results-header">
+        <div class="results-count">Showing 8 of 127 results</div>
+        <div class="sort-options">
+          <select>
+            <option>Sort by: Relevance</option>
+            <option>Sort by: Date (Newest)</option>
+            <option>Sort by: Date (Oldest)</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="results-grid">
+        <div class="result-card">
+          <h3>Effects of Microgravity on Arabidopsis Thaliana Root Growth</h3>
+          <div class="result-meta">
+            <span><i class="fas fa-user"></i> Dr. Emily Zhang</span>
+            <span><i class="fas fa-calendar"></i> 2023-04-15</span>
+          </div>
+          <div class="result-description">
+            Investigation of how microgravity conditions affect the root development and gene expression in Arabidopsis thaliana.
+          </div>
+          <div class="result-tags">
+            <span class="tag">Plant Biology</span>
+            <span class="tag">ISS</span>
+            <span class="tag">Gene Expression</span>
+          </div>
+        </div>
+        
+        <div class="result-card">
+          <h3>Microbial Adaptation to Space Environment</h3>
+          <div class="result-meta">
+            <span><i class="fas fa-user"></i> Dr. Robert Johnson</span>
+            <span><i class="fas fa-calendar"></i> 2023-03-22</span>
+          </div>
+          <div class="result-description">
+            Study of mutation rates and adaptation mechanisms of Escherichia coli in long-duration spaceflight.
+          </div>
+          <div class="result-tags">
+            <span class="tag">Microbiology</span>
+            <span class="tag">ISS</span>
+            <span class="tag">Adaptation</span>
+          </div>
+        </div>
+        
+        <div class="result-card">
+          <h3>DNA Repair Mechanisms Under Cosmic Radiation</h3>
+          <div class="result-meta">
+            <span><i class="fas fa-user"></i> Dr. Sarah Williams</span>
+            <span><i class="fas fa-calendar"></i> 2023-02-10</span>
+          </div>
+          <div class="result-description">
+            Analysis of DNA repair efficiency in human cell cultures exposed to simulated cosmic radiation.
+          </div>
+          <div class="result-tags">
+            <span class="tag">Genetics</span>
+            <span class="tag">Radiation</span>
+            <span class="tag">Human Cells</span>
+          </div>
+        </div>
+        
+        <div class="result-card">
+          <h3>Protein Crystallization in Microgravity</h3>
+          <div class="result-meta">
+            <span><i class="fas fa-user"></i> Dr. Michael Chen</span>
+            <span><i class="fas fa-calendar"></i> 2023-01-18</span>
+          </div>
+          <div class="result-description">
+            Comparative study of protein crystallization quality in microgravity versus Earth conditions.
+          </div>
+          <div class="result-tags">
+            <span class="tag">Biochemistry</span>
+            <span class="tag">Crystallography</span>
+            <span class="tag">ISS</span>
+          </div>
+        </div>
+        
+        <div class="result-card">
+          <h3>Effect of Space Radiation on Telomere Length</h3>
+          <div class="result-meta">
+            <span><i class="fas fa-user"></i> Dr. Lisa Rodriguez</span>
+            <span><i class="fas fa-calendar"></i> 2022-12-05</span>
+          </div>
+          <div class="result-description">
+            Longitudinal study of telomere dynamics in astronauts during and after long-duration spaceflight.
+          </div>
+          <div class="result-tags">
+            <span class="tag">Genetics</span>
+            <span class="tag">Human Study</span>
+            <span class="tag">Radiation</span>
+          </div>
+        </div>
+        
+        <div class="result-card">
+          <h3>Algae Biofuel Production in Closed Systems</h3>
+          <div class="result-meta">
+            <span><i class="fas fa-user"></i> Dr. James Wilson</span>
+            <span><i class="fas fa-calendar"></i> 2022-11-14</span>
+          </div>
+          <div class="result-description">
+            Testing the efficiency of algae-based biofuel production in space-like closed environmental systems.
+          </div>
+          <div class="result-tags">
+            <span class="tag">Biofuels</span>
+            <span class="tag">Algae</span>
+            <span class="tag">Life Support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+      <p>BioSearch NASA - Biology Experiment Database | NASA Open Data Portal</p>
+      <p>© 2023 NASA Science Mission Directorate. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
