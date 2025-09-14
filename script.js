@@ -26,4 +26,6 @@ document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
 });
 
 // Initialize filter count
-updateFilterCount();
+
+document.querySelector('.filter-count').textContent = '0';
+
